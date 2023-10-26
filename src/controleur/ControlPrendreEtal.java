@@ -26,4 +26,7 @@ public class ControlPrendreEtal {
 	public boolean verifierIdentite(String nomVendeur) {
 		return controlVerifierIdentite.verifierIdentite(nomVendeur);
 	}
+	public boolean isNotVendeur(String nomVendeur) {
+		return controlVerifierIdentite.isNotVendeur(nomVendeur);
+	}
 }

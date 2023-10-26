@@ -13,10 +13,13 @@ public class ControlTrouverEtalVendeur {
 
 	public Etal trouverEtalVendeur(String nomVendeur) {
 		Gaulois gaulois = village.trouverHabitant(nomVendeur);
-		Etal etal = new Etal();
 		if (gaulois!=null) {
-			etal = village.rechercherEtal(gaulois);
+			Etal etal = village.rechercherEtal(gaulois);
+			return etal;
 		}
-		return etal;
+		return null;
+	}
+	public void partirVendeur(Gaulois gaulois) {
+		village.partirVendeur(gaulois);
 	}
 }

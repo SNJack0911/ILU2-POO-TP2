@@ -34,12 +34,15 @@ public class ControlAcheterProduit {
 		return etal.getQuantite();
 	}
 
-	public void vendre(String nomVendeur, int nbProduitAcheter) {
+	public int acheterProduit(String nomVendeur, int nbProduitAcheter) {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-		if(nbProduitAcheter >  etal.getQuantite()) {
-			etal.acheterProduit(etal.getQuantite());
+		int nbProduitEtal=etal.getQuantite();
+		if(nbProduitAcheter >  nbProduitEtal) {
+			etal.acheterProduit(nbProduitEtal);
+			return nbProduitEtal;
 		}else {
 			etal.acheterProduit(nbProduitAcheter);
+			return nbProduitAcheter;
 		}
 	}
 	public Boolean verifierAcheteur(String nomAcheteur) {

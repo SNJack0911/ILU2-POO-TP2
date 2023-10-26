@@ -49,10 +49,10 @@ public class BoundaryAcheterProduit {
 			quotes.append(", malheuresement "+nomVendeur+" n'en a plus que "+stock+". ");
 			quotes.append(nomAcheteur+" acheter tout le stock de "+nomVendeur);
 			System.out.println(quotes.toString());
-			controlAcheterProduit.vendre(nomVendeur,nbProduitAcheter);
+			controlAcheterProduit.acheterProduit(nomVendeur,nbProduitAcheter);
 		}else {
 			System.out.println(nomAcheteur+" achete "+nbProduitAcheter+" "+produit+" a "+nomVendeur);
-			controlAcheterProduit.vendre(nomVendeur, nbProduitAcheter);
+			controlAcheterProduit.acheterProduit(nomVendeur, nbProduitAcheter);
 		}
 	}
 }
