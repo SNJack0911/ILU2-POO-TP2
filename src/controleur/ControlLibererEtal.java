@@ -25,8 +25,8 @@ public class ControlLibererEtal {
 		if (this.isVendeur(nomVendeur)) {
 			Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 			Gaulois gaulois=etal.getVendeur();
-			String[] donneesEtal = etal.etatEtal();
 			controlTrouverEtalVendeur.partirVendeur(gaulois);
+			String[] donneesEtal = etal.etatEtal();
 			return donneesEtal;
 		}
 		return null;

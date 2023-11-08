@@ -23,6 +23,7 @@ public class TestControleursDesCas {
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Asterix", 6);
 		Gaulois obelix = new Gaulois("Obelix", 12);
+		
 
 		ControlAfficherVillage controlAfficherVillage = new ControlAfficherVillage(
 				village);
