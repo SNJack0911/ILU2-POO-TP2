@@ -44,5 +44,21 @@ class ControlEmmenagerTest {
 		controlEmmenager.ajouterGaulois("Bonemine", 10);
 		assertTrue(controlEmmenager.isHabitant("Bonemine"));
 	}
+	@Test
+	void testAjouterDepasseCapacite() {
+		ControlEmmenager controlEmmenager=new ControlEmmenager(village);
+		controlEmmenager.ajouterGaulois("1", 10);
+		controlEmmenager.ajouterGaulois("2", 10);
+		controlEmmenager.ajouterGaulois("3", 10);
+		controlEmmenager.ajouterGaulois("4", 10);
+		controlEmmenager.ajouterGaulois("5", 10);
+		controlEmmenager.ajouterGaulois("6", 10);
+		controlEmmenager.ajouterGaulois("7", 10);
+		controlEmmenager.ajouterGaulois("8", 10);
+		controlEmmenager.ajouterGaulois("9", 10);
+		controlEmmenager.ajouterGaulois("10", 10);
+		controlEmmenager.ajouterGaulois("11", 10);
+		assertFalse(controlEmmenager.isHabitant("11"));
+	}
 
 }

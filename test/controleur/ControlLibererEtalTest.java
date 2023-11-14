@@ -47,7 +47,8 @@ class ControlLibererEtalTest {
 		assertNull(donneesEtal,"Not a Vendeur");
 		donneesEtal =controlLibererEtal.libererEtal("Obelisk");
 		assertFalse(Boolean.getBoolean(donneesEtal[0]),"PartirVendeur");
-		
+		donneesEtal =controlLibererEtal.libererEtal("Obelisk");
+		assertFalse(Boolean.getBoolean(donneesEtal[0]));
 	}
 
 }

@@ -36,13 +36,18 @@ public class ControlAcheterProduit {
 
 	public int acheterProduit(String nomVendeur, int nbProduitAcheter) {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-		int nbProduitEtal=etal.getQuantite();
-		if(nbProduitAcheter >  nbProduitEtal) {
-			etal.acheterProduit(nbProduitEtal);
-			return nbProduitEtal;
+		if (etal.isEtalOccupe()) {
+			int nbProduitEtal=etal.getQuantite();
+			if(nbProduitAcheter >  nbProduitEtal) {
+				etal.acheterProduit(nbProduitAcheter);
+				return nbProduitEtal;
+			}else {
+				etal.acheterProduit(nbProduitAcheter);
+				return nbProduitAcheter;
+			}
 		}else {
 			etal.acheterProduit(nbProduitAcheter);
-			return nbProduitAcheter;
+			return 0;
 		}
 	}
 	public Boolean verifierAcheteur(String nomAcheteur) {
